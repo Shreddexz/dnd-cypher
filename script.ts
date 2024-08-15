@@ -16,11 +16,14 @@ function generateCipherWheel(): void {
         rows[0]?.appendChild(latinLetter);
         rows[1]?.appendChild(cipherLetter);
     }
+    translate();
 }
 
 function translate(): void {
     const message = (<HTMLTextAreaElement>document.getElementById("input"))!.value;
-    console.log(message);
+    var output = "";
+    [...message].forEach((c) => output += String.fromCharCode(wrapAlpha(c.charCodeAt(0) + offset - 97) + 97));
+    (<HTMLTextAreaElement>document.getElementById("output"))!.value = output;
 }
 
 function rotate(direction: number): void {
