@@ -22,7 +22,7 @@ function generateCipherWheel(): void {
 function translate(): void {
     const message = (<HTMLTextAreaElement>document.getElementById("input"))!.value;
     var output = "";
-    [...message].forEach((c) => output += String.fromCharCode(wrapAlpha(c.charCodeAt(0) + offset - 97) + 97));
+    [...message].forEach((c) => output += translateCharacter(c));
     (<HTMLTextAreaElement>document.getElementById("output"))!.value = output;
 }
 
@@ -47,4 +47,9 @@ function wrapAlpha(chr: number): number {
 
 function randomInt(max): number {
     return Math.floor(Math.random() * max);
+}
+
+function translateCharacter(c: String): String {
+    if (c.match(/^[ .,!@£$%^&*()<>;:"'/?1234567890]/)) return c;
+    return String.fromCharCode(wrapAlpha(c.charCodeAt(0) + offset - 97) + 97);
 }
