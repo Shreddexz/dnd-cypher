@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Cipher;
+    src: url("cipher.otf") format("opentype");
+}
+
+#content {
+    position: absolute;
+    background-color: lightgray;
+    border-radius: 20px;
+    width: 70%;
+    height: 80%;
+    left: 15%;
+    top: 10%;
+    padding: 20px;
+    text-align: center;
+}
+
+#latin-row button {
+    font-size: 1.5em;
+}
+
+#cipher-row {
+    margin-bottom: 10px;
+}
+
+#cipher-row button {
+    font-family: 'Cipher';
+    font-size: 2em;
+}
+
+button {
+    min-width: 2.5rem;
+}

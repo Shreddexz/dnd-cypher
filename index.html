@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DnD Glyph Generator</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body onload="setup()">
+        <div id="content">
+            <div id="cipher-wheel">
+                <div id="latin-row" class="row"></div>
+                <div id="cipher-row" class="row"></div>
+                <div id="controls">
+                    <button onclick="rotate(1)"><</button>
+                    <button onclick="rotate(-1)">></button>
+                    <button onclick="random()">random</button>
+                    <button onclick="reset()">reset</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
