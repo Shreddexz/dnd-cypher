@@ -2,6 +2,7 @@ var offset = 0;
 
 function setup(): void {
     generateCipherWheel();
+    document.getElementById("input").addEventListener("input", (event) => translate());
 }
 
 function generateCipherWheel(): void {
@@ -15,6 +16,11 @@ function generateCipherWheel(): void {
         rows[0]?.appendChild(latinLetter);
         rows[1]?.appendChild(cipherLetter);
     }
+}
+
+function translate(): void {
+    const message = (<HTMLTextAreaElement>document.getElementById("input"))!.value;
+    console.log(message);
 }
 
 function rotate(direction: number): void {
