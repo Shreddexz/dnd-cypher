@@ -4,7 +4,7 @@ A simple tool that implements the caesar cipher with a custom font for encoding 
 
 ## Use
 
-The cipher translation tool is available on my website: [billyrebecchi.co.uk/dnd-cipher](http://billyrebecchi.co.uk/dnd-cipher)
+The cipher translation tool is available on the original creator's website: [billyrebecchi.co.uk/dnd-cipher](http://billyrebecchi.co.uk/dnd-cipher)
 
 ## Setup
 
